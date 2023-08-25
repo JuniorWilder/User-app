@@ -5,10 +5,6 @@ import { Footer } from '../Components/Footer'
 
 export const Contato = () => {
   return (
-    <Container>
-        <Menu/>
-        Contato
-        <Footer/>
-    </Container>
+    <div>Contato</div>
   )
 }

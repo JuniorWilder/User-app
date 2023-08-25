@@ -1,10 +1,19 @@
 import React from 'react'
 import { FloatLabel } from '../Components/FloatLabel'
+import { Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 export const Login = () => {
+    const navigate = useNavigate()
+
+    const login = () => (
+        event.preventDefault(),
+        navigate('/home')
+    )
+
   return (
     <main className="form-signin w-100 m-auto" style={{maxWidth:'35%'}}>
-  <form>
+  <form onSubmit={login}>
     <img className="mb-4" src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"/>
     <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
@@ -24,8 +33,7 @@ export const Login = () => {
         Remember me
       </label>
     </div>
-    <button className="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-    <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+    <Button className="w-100 py-2" variant="primary" type='submit'>Primary</Button>
   </form>
 </main>
   )

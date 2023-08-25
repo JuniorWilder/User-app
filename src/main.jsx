@@ -6,15 +6,42 @@ import {
   UNSAFE_useScrollRestoration
 } from 'react-router-dom'
 //import './index.css'
-import { Login } from './Pages/login';
 import { Usuario } from './Pages/Usuario';
 import { Cadastro } from './Pages/Cadastro';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Contato } from './Pages/Contato';
+import { Home } from './Pages/Home';
+import { Login } from './Pages/login';
 
 
 const router = createBrowserRouter([
+
+  {
+    path: "/",
+    element: <App/>,
+    children: [
+      {
+        path: "/contato",
+        element: <Contato/>,
+      },
+      {
+        path: "/usuarios",
+        element: <Usuario/>,
+      },
+      {
+        path: "/home",
+        element: <Home/>,
+      },
+    ]
+  }, 
+  {
+    path: "/login",
+    element: <Login/>,
+  },
+]);
+
+/* const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login/>,
@@ -35,7 +62,7 @@ const router = createBrowserRouter([
     path: "/contato",
     element: <Contato/>,
   },
-]);
+]); */
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

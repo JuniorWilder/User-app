@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { Menu } from './Components/Menu'
 import { Footer } from './Components/Footer'
 import { Container } from 'react-bootstrap'
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <>
     <Container>
       <Menu/>
-      Bem-vindo!
+      <Outlet/>
       <Footer/>
     </Container>
     </>
