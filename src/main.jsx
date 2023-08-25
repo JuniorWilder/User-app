@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom'
 //import './index.css'
 import { Usuario } from './Pages/Usuario';
-import { Cadastro } from './Pages/Cadastro';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Contato } from './Pages/Contato';
